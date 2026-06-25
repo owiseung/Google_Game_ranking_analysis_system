@@ -53,7 +53,7 @@ jobs:
         if: steps.window.outputs.enabled == 'true'
         run: |
           pip install -e .
-          pnpm install --frozen-lockfile
+          pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Define collection ID
         if: steps.window.outputs.enabled == 'true'
